@@ -16,8 +16,11 @@ module "private_endpoint" {
 
   settings        = each.value
   global_settings = var.global_settings
-  base_tags       = var.base_tags
-  tags            = local.tags
+  # base_tags       = var.base_tags
+  # tags            = local.tags
+  # base_tags       = local.tags
+  base_tags = false
+  tags = local.tags
   private_dns     = var.private_dns
   client_config   = var.client_config
 }
